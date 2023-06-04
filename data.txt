@@ -1,0 +1,35 @@
+1 image, you can run many containers.
+
+running script , after container starts by      ENTRYPOINT[" "]
+
+
+WHEN USE entrypoint?
+when container starts you initialize your database like postgressql.
+
+situation:
+for each project you write seperate Dockerfile.
+
+but official postgressql image, own having ENTRYPOINT. so resolved of writing Dockerfile with ENTRYPOINT for each project.
+
+
+
+you in script in when container starts:-----
+need to initialize db.
+need to specify env variable.
+complicated logic.
+
+
+default ENTRYPOINT IS  /bin/sh -c 
+
+
+but CMD INSTRUCTION IS:
+/bin/sh -c "flask .............."
+
+ENTRYPOINT:
+let u run custom script.
+
+ENTRYPOINT TO EXECUTE CUSTOM SCRIPT:
+FOR NEED OF DB MIGRATION.
+TO CHANGE CONFIG FILE LIKE NGINX ETC.
+
+
